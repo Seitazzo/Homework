@@ -23,7 +23,7 @@ public class SignupActivity extends AppCompatActivity {
     public void apply(View view) {
         final EditText editText1 = (EditText) findViewById(R.id.editText3);
         Intent intent = new Intent(this, DisplayMessageActivity.class);
-        String message = editText1.getText().toString()+"注册成功";
+        String message = editText1.getText().toString()+"注册成功0";
 
         final EditText editText2=(EditText)findViewById(R.id.editText4);
         final CheckBox checkBox1=(CheckBox)findViewById(R.id.checkBox);
