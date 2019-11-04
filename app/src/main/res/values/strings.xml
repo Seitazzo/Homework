@@ -1,10 +1,19 @@
 <resources>
-    <string name="app_name">Homework_1</string>
-    <string name="login_username_textview">学号</string>
-    <string name="login_username_plaintext">请在此输入你的学号</string>
-    <string name="login_password_textview">密码</string>
-    <string name="login_password_plaintext">请在此输入你的密码</string>
-    <string name="button_cancel">重置</string>
+    <string name="app_name">Homework</string>
+    <string name="textview_username">学号</string>
+    <string name="plaintext_username">请在此输入你的学号</string>
+    <string name="textview_password">密码</string>
+    <string name="plaintext_password">请在此输入你的密码</string>
+    <string name="button_reset">重置</string>
     <string name="button_apply">确认</string>
-    <string name="logo">logo</string>
+    <string name="photo_logo">logo</string>
+    <string name="menuitem_signup">注册</string>
+    <string name="label_mainview">登陆</string>
+    <string name="menuitem_test">测试</string>
+    <string name="textview_gender">性别</string>
+    <string name="checkbox_male">男</string>
+    <string name="checkbox_female">女</string>
+    <string name="button_back">返回</string>
+    <string name="switch_forfun">我同意学生管理制度汇编所记内容</string>
+    <string name="checkbox_other">其它</string>
 </resources>
