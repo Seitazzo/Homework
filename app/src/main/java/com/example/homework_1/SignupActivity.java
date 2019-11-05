@@ -12,7 +12,6 @@ import android.widget.Switch;
 import android.widget.Toast;
 
 public class SignupActivity extends AppCompatActivity {
-    public static final String EXTRA_MESSAGE = "com.example.myfirstapp.MESSAGE";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,7 +48,7 @@ public class SignupActivity extends AppCompatActivity {
             message = null;
         }
 
-        intent.putExtra(EXTRA_MESSAGE, message);
+        intent.putExtra("signUpActivity_number", message);
         startActivity(intent);
     }
 

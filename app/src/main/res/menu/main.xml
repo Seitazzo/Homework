@@ -4,8 +4,8 @@
 
     <item
         android:id="@+id/signup_item"
-        android:title="@string/menuitem_signup" />
+        android:title="@string/menuItem_signup" />
     <item
         android:id="@+id/test_item"
-        android:title="@string/menuitem_test" />
+        android:title="@string/menuItem_test" />
 </menu>

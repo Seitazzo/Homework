@@ -14,7 +14,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
-    public static final String EXTRA_MESSAGE = "com.example.myfirstapp.MESSAGE";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,22 +30,25 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void apply(View view) {
-        final EditText editText = findViewById(R.id.editText);
+        final EditText editText1 = findViewById(R.id.editText);
+        final EditText editText2 = findViewById(R.id.editText2);
         Intent intent = new Intent(this, DisplayMessageActivity.class);
-        String message = editText.getText().toString() + "登陆成功";
+        String message = editText1.getText().toString() + "登陆成功";
 
-        final EditText editText1 = findViewById(R.id.editText2);
-        if (TextUtils.isEmpty(editText.getText())) {
+        if (TextUtils.isEmpty(editText1.getText())) {
             Toast.makeText(this, "请输入学号", Toast.LENGTH_SHORT).show();
             message = null;
         }
-        if (TextUtils.isEmpty(editText1.getText())) {
+        if (TextUtils.isEmpty(editText2.getText())) {
             Toast.makeText(this, "请输入密码", Toast.LENGTH_SHORT).show();
             message = null;
         }
 
-        intent.putExtra(EXTRA_MESSAGE, message);
+        intent.putExtra("mainActivity_number", message);
         startActivity(intent);
+
+        editText1.setText(null, TextView.BufferType.EDITABLE);
+        editText2.setText(null, TextView.BufferType.EDITABLE);
     }
 
     public boolean onCreateOptionsMenu(Menu menu) {

@@ -1,19 +1,25 @@
 <resources>
     <string name="app_name">Homework</string>
-    <string name="textview_username">学号</string>
-    <string name="plaintext_username">请在此输入你的学号</string>
-    <string name="textview_password">密码</string>
-    <string name="plaintext_password">请在此输入你的密码</string>
+    <string name="textView_username">学号</string>
+    <string name="plainText_username">请在此输入你的学号</string>
+    <string name="textView_password">密码</string>
+    <string name="plainText_password">请在此输入你的密码</string>
     <string name="button_reset">重置</string>
     <string name="button_apply">确认</string>
     <string name="photo_logo">logo</string>
-    <string name="menuitem_signup">注册</string>
+    <string name="menuItem_signup">注册</string>
     <string name="label_mainview">登陆</string>
-    <string name="menuitem_test">测试</string>
-    <string name="textview_gender">性别</string>
+    <string name="menuItem_test">测试</string>
+    <string name="textView_gender">性别</string>
     <string name="checkbox_male">男</string>
     <string name="checkbox_female">女</string>
     <string name="button_back">返回</string>
     <string name="switch_forfun">我同意学生管理制度汇编所记内容</string>
     <string name="checkbox_other">其它</string>
+    <string name="button_transfer">转账</string>
+    <string name="textView_warning">请确保与转账的同学面对面谨慎进行操作\n教务处无法承诺为该功能造成的损失负责</string>
+    <string name="textView_account">对方学号</string>
+    <string name="textView_amount">转账金额</string>
+    <string name="plainText_account">请在此输入对方学号</string>
+    <string name="plainText_amount">请在此输入转账金额</string>
 </resources>
