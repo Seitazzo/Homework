@@ -105,6 +105,7 @@
         android:id="@+id/button4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:onClick="back"
         android:text="@string/button_back"
         app:layout_constraintBaseline_toBaselineOf="@+id/button3"
         app:layout_constraintEnd_toStartOf="@+id/button3"

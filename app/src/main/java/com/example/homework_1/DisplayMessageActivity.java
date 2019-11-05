@@ -13,23 +13,22 @@ public class DisplayMessageActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_display_message);
 
-        String message=null;
+        String message = null;
         Intent intent = getIntent();
-        if(intent.getStringExtra(MainActivity.EXTRA_MESSAGE)!=null){
-            message=intent.getStringExtra(MainActivity.EXTRA_MESSAGE);
-        }
-        else if(intent.getStringExtra(SignupActivity.EXTRA_MESSAGE)!=null){
-            message=intent.getStringExtra(SignupActivity.EXTRA_MESSAGE);
+        if (intent.getStringExtra(MainActivity.EXTRA_MESSAGE) != null) {
+            message = intent.getStringExtra(MainActivity.EXTRA_MESSAGE);
+        } else if (intent.getStringExtra(SignupActivity.EXTRA_MESSAGE) != null) {
+            message = intent.getStringExtra(SignupActivity.EXTRA_MESSAGE);
         }
 
-        if(message!=null){
+        if (message != null) {
             TextView textView = findViewById(R.id.textView3);
             textView.setText(message);
-        }
-        else{
+        } else {
             String error = "错误：未满足登陆/注册需填写信息条件";
             TextView textView = findViewById(R.id.textView3);
             textView.setText(error);
         }
+
     }
 }
