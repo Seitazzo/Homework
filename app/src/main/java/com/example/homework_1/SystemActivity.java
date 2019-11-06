@@ -12,10 +12,17 @@ public class SystemActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_system);
+        setTitle("教务系统");
     }
 
-    public void transfer(View view){
-        Intent intent =new Intent(this,TransferActivity.class);
+    @Override
+    public void onBackPressed() {
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
+    }
+
+    public void transfer(View view) {
+        Intent intent = new Intent(this, TransferActivity.class);
         startActivity(intent);
     }
 }

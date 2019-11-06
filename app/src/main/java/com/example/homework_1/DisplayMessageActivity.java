@@ -15,6 +15,7 @@ public class DisplayMessageActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_display_message);
+        setTitle("提示");
 
         String message;
         Intent intent = getIntent();
@@ -29,18 +30,30 @@ public class DisplayMessageActivity extends AppCompatActivity {
 
             TextView textView = findViewById(R.id.textView3);
             textView.setText(message);
-            goMain(2000);
+            goMain(1500);
         } else if (intent.getStringExtra("transfer_message") != null) {
             message = intent.getStringExtra("transfer_message");
 
             TextView textView = findViewById(R.id.textView3);
             textView.setText(message);
-            goSystem(3000);
+            goSystem(1500);
         } else {
             String error = "错误：未满足需填写信息条件";
             TextView textView = findViewById(R.id.textView3);
             textView.setText(error);
+            goFinish(1500);
         }
+    }
+
+    public void goFinish(int i){
+        Timer time = new Timer();
+        TimerTask tk = new TimerTask() {
+            @Override
+            public void run() {
+                finish();
+            }
+        };
+        time.schedule(tk, i);
     }
 
     public void goSystem(int i) {
