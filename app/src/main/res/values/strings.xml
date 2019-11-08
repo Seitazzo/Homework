@@ -22,4 +22,8 @@
     <string name="textView_amount">转账金额</string>
     <string name="plainText_account">请在此输入对方学号</string>
     <string name="plainText_amount">请在此输入转账金额</string>
+    <string name="button_signup">注册</string>
+    <string name="button_forget">忘记密码</string>
+    <string name="menuItem_exit">退出</string>
+    <string name="menuItem_logout">注销</string>
 </resources>

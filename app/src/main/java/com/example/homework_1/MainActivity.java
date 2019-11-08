@@ -22,8 +22,42 @@ public class MainActivity extends AppCompatActivity {
         setTitle("登陆");
     }
 
+    @Override
+    public void onBackPressed() {
+        BaseActivity.ActivityCollector.finishAll();
+    }
+
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.main, menu);
+        return true;
+    }
+
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.signup_item:
+                Intent intent1 = new Intent(this, SignupActivity.class);
+                startActivity(intent1);
+                break;
+            case R.id.test_item:
+                Toast.makeText(this, "网络测试", Toast.LENGTH_SHORT).show();
+                Intent intent2 = new Intent();
+                intent2.setAction(Intent.ACTION_VIEW);
+                intent2.setData(Uri.parse("http://bing.com/"));
+                startActivity(intent2);
+                break;
+            case R.id.exit_item:
+                BaseActivity.ActivityCollector.finishAll();
+                break;
+            default:
+        }
+        return true;
+    }
 
     public void reset(View view) {
+        reset();
+    }
+
+    public void reset() {
         final EditText editText1 = findViewById(R.id.editText);
         final EditText editText2 = findViewById(R.id.editText2);
         editText1.setText(null, TextView.BufferType.EDITABLE);
@@ -48,29 +82,21 @@ public class MainActivity extends AppCompatActivity {
         intent.putExtra("mainActivity_number", message);
         startActivity(intent);
 
-        editText1.setText(null, TextView.BufferType.EDITABLE);
-        editText2.setText(null, TextView.BufferType.EDITABLE);
+        reset();
     }
 
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.main, menu);
-        return true;
+    public void signUp(View view) {
+        Intent intent = new Intent(this, SignupActivity.class);
+        startActivity(intent);
+
+        reset();
     }
 
-    public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()) {
-            case R.id.signup_item:
-                Intent intent1 = new Intent(this, SignupActivity.class);
-                startActivity(intent1);
-                break;
-            case R.id.test_item:
-                Toast.makeText(this, "网络测试", Toast.LENGTH_SHORT).show();
-                Intent intent2 = new Intent();
-                intent2.setAction(Intent.ACTION_VIEW);
-                intent2.setData(Uri.parse("http://bing.com/"));
-                startActivity(intent2);
-            default:
-        }
-        return true;
+    public void forget(View view) {
+        Intent intent = new Intent(this, DisplayMessageActivity.class);
+        intent.putExtra("forget_message", "还没写好~");
+        startActivity(intent);
+
+        reset();
     }
 }

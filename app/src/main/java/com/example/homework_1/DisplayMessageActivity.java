@@ -37,7 +37,14 @@ public class DisplayMessageActivity extends AppCompatActivity {
             TextView textView = findViewById(R.id.textView3);
             textView.setText(message);
             goSystem(1500);
-        } else {
+        } else if (intent.getStringExtra("forget_message") != null) {
+            message = intent.getStringExtra("forget_message");
+
+            TextView textView = findViewById(R.id.textView3);
+            textView.setText(message);
+            goFinish(1000);
+        }
+        else {
             String error = "错误：未满足需填写信息条件";
             TextView textView = findViewById(R.id.textView3);
             textView.setText(error);

@@ -5,6 +5,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.EditText;
@@ -20,6 +22,22 @@ public class SignupActivity extends AppCompatActivity {
         setTitle("注册");
     }
 
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.signup, menu);
+        return true;
+    }
+
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.exit_item:
+                BaseActivity.ActivityCollector.finishAll();
+                break;
+            case R.id.signup_item:
+                break;
+            default:
+        }
+        return true;
+    }
 
     public void apply(View view) {
         final EditText editText1 = findViewById(R.id.editText3);
